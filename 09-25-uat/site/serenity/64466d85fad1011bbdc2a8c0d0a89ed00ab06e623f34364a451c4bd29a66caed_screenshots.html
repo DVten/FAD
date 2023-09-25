@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="799cad7a8b0bc7a0b3e1699862a84d040577207f1ce4f08b8189b6ccbce5a6bf.html">Voucher Entries</a></span>
+                > <span class="truncate-60"><a
+                    href="64466d85fad1011bbdc2a8c0d0a89ed00ab06e623f34364a451c4bd29a66caed.html">Partial voucher match </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 25-09-2023 19:02</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Voucher Entries </span>
+                                    <span class="badge tag-badge" style="">Story</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Partial voucher match
+                                    <span class="related-issue-title">(VM08)</span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="2a49955fa4ea79611913491931241e643b26516bc53269733354e7ed1fdb7619.png" title=" Given that I'm logged in to 'Voucher Match' page" width="1920"/>
+                <img src="2a49955fa4ea79611913491931241e643b26516bc53269733354e7ed1fdb7619.png" title=" When i open FAD URL" width="1920"/>
+                <img src="2a49955fa4ea79611913491931241e643b26516bc53269733354e7ed1fdb7619.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Voucher Match}" width="1920"/>
+                <img src="ff038a9f96834671cc31235b5d005b9f174029679d524198fa1b686d92c93c40.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Voucher Match}" width="1920"/>
+                <img src="6c828a412650b0dc6421401ecd8a249006b9402d032f511437c2883ffebe4232.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Voucher Match}" width="1920"/>
+                <img src="e7b931eb610cb0cf59dd36ac034cf3ea1a6104e10567c94cff2f2ead4a7e1d86.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Voucher Match}" width="1920"/>
+                <img src="d3b966fce41d7ca01af5020ebf1b609c3a777ad6edfec696f04af388d51302f6.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Voucher Match} (completed)" width="1920"/>
+                <img src="d3b966fce41d7ca01af5020ebf1b609c3a777ad6edfec696f04af388d51302f6.png" title=" Given that I'm logged in to 'Voucher Match' page (completed)" width="1920"/>
+                <img src="d3b966fce41d7ca01af5020ebf1b609c3a777ad6edfec696f04af388d51302f6.png" title=" Then the 'Voucher Match' page and its contents should show up" width="1920"/>
+                <img src="78d5ff5d44753a146ae873fdddad08fc205e25510515e94bf7613a2aca30cc99.png" title=" When I set the 'Supplier' to '220221'" width="1920"/>
+                <img src="ac715823a7db46bc9c97585e994e6e536f23d1cd27bf85f31a3b858fce56793f.png" title=" When I set the 'Supplier' to '220221' (completed)" width="1920"/>
+                <img src="2b413b830ec13ba894742eba802ae1de37ccb6e542696d316f36e7f0b4cd6451.png" title=" When i clear the business unit" width="1920"/>
+                <img src="114e40a8a824a6d9dc9d0bf3dc05e3714affd4660d77ca3c5a9d30b37975be11.png" title=" When i clear the business unit (completed)" width="1920"/>
+                <img src="9cca896866102b28e5c48d6a29faaed90f88eb7943f6211438b00169a079c328.png" title=" When I click the 'Search' button" width="1920"/>
+                <img src="b334ee1c39ad85e3aa188d996a34ad4a5e56d037f345e84c77ae3e208b68949c.png" title=" When I click the 'Search' button" width="1920"/>
+                <img src="b997a9c9679c3b2b6cb4430641ccde4de9bfb631205b900fdb979085991d56c9.png" title=" When I click the 'Search' button (completed)" width="1920"/>
+                <img src="17c49304f4839808bbd1aad31978a402d9150c9f34ec33daca157a5e4706bf84.png" title=" When I click the 'See More Details' button" width="1920"/>
+                <img src="3ec2f729288238c931cfb3c56a24c0b2a28d7e5b84707ac4bd7e9b3ca2c7a648.png" title=" When I click the 'See More Details' button (completed)" width="1920"/>
+                <img src="3eda22ea581a165d645d045dd740709e69b5ff421eb245a89f77cd3eab303501.png" title=" When I click the checkbox of the first invoice row" width="1920"/>
+                <img src="3eda22ea581a165d645d045dd740709e69b5ff421eb245a89f77cd3eab303501.png" title=" When I click the checkbox of the first invoice row (completed)" width="1920"/>
+                <img src="74dbc50feca1b6ecf02740041e673afd7bb84f5c5df6f1cc541e39fa2312844a.png" title=" When I click on 'Match' button" width="1920"/>
+                <img src="703abc292e404b534607ae016264008975e940dd71a55b163dd5d8587a6fc605.png" title=" When I click on 'Match' button" width="1920"/>
+                <img src="58cf7ef4c89c1441a0dfd1eb164577d93bf0b18daac6850a8ad8597bddeb9dfd.png" title=" When I click on 'Match' button (completed)" width="1920"/>
+                <img src="58cf7ef4c89c1441a0dfd1eb164577d93bf0b18daac6850a8ad8597bddeb9dfd.png" title=" Then the 'Payment Information' and its contents should show up" width="1920"/>
+                <img src="9c508de07aa4cf312da65e98166c907dd44c7af75cb881f7162e0b8a86a1584c.png" title=" When I set the 'Invouce Number' to 'wB1RMJs1wg'" width="1920"/>
+                <img src="1f05e0dc129ab175259b58426dad228a58570707024b7b41222ade05b45f0004.png" title=" When I click on 'Continue' button" width="1920"/>
+                <img src="a7413d0f20b87ae3d286d63986dbd3b5a5b194dd4910a262a9d257bb34d45e3d.png" title=" When I click on 'Continue' button (completed)" width="1920"/>
+                <img src="e29a4554334b004e1681336c6de7de450feabb48fe5ef37b40608555daf3dbfb.png" title=" When I select the first Bank Account and click 'Submit' button if modal exist" width="1920"/>
+                <img src="7fefcd86f7c3023383ff4460540158fae3354b9b8ef2c107749682050ec6dee9.png" title=" When I set the Quantity to voucher to '1'" width="1920"/>
+                <img src="7fefcd86f7c3023383ff4460540158fae3354b9b8ef2c107749682050ec6dee9.png" title=" When i click the last payment amount table row if its not editable" width="1920"/>
+                <img src="27befdf173f89905fec4d2d2acf6e7cc751ceabc6d63fe01d53454fdc50592a3.png" title=" When i click the last payment amount table row if its not editable (completed)" width="1920"/>
+                <img src="407dfcc31f0568e1685197c08eed362472615678cd605c070044182e064c7b1d.png" title=" When I set the Quantity to voucher to '1' (completed)" width="1920"/>
+                <img src="407dfcc31f0568e1685197c08eed362472615678cd605c070044182e064c7b1d.png" title=" When I set the Amount to voucher to '0'" width="1920"/>
+                <img src="407dfcc31f0568e1685197c08eed362472615678cd605c070044182e064c7b1d.png" title=" When i click the last payment amount table row if its not editable" width="1920"/>
+                <img src="34094544cfa25607e2d020ce7de73efdae0bd62ed2e02c69787161d013d308af.png" title=" When I set the Amount to voucher to '0' (completed)" width="1920"/>
+                <img src="ec0ce000dee8e1033ebd0f67f01931f42120d227a478be9a8c4f1c5820fca1f6.png" title=" When i click on validate button if its enabled" width="1920"/>
+                <img src="b7e0eba636f2bf91914daa4af7dc0dc3df927deac66722192f352fcef7348a72.png" title=" When i click on validate button if its enabled (completed)" width="1920"/>
+                <img src="5bf85f79225b4936f69d73e90b15045293d956932c274516bad96217ea65b15c.png" title=" When I set the 'Gross Amount' to '0'" width="1920"/>
+                <img src="fb12af8f345de8f90001d5786031c9bf63abbb7091375ef1073ba59b81af5766.png" title=" When I click on 'Validate' button" width="1920"/>
+                <img src="3a0617dc1fbf0f2b4a786a9910f0b7c68749458eafcace2e96b4cd23a3964003.png" title=" When I click on 'Validate' button (completed)" width="1920"/>
+                <img src="7485b796002639af0f25e95aedcd0b9c4033daf2ddd5a9310f145c01f1743638.png" title=" When I click on 'Save' button" width="1920"/>
+                <img src="cfe276984871006fee90525f7195445abf0557e6df943993215956309c3a7ee8.png" title=" When I click on 'Save' button (completed)" width="1920"/>
+                <img src="d2fc77c4bfa1509f6ba541abb1f2d32ac4f6d91fa2cc9a3bfceb064e41227070.png" title=" Then the 'Voucher Match Successfully Created' modal should show up" width="1920"/>
+                <img src="d2fc77c4bfa1509f6ba541abb1f2d32ac4f6d91fa2cc9a3bfceb064e41227070.png" title=" Then the voucher match successfuly created modal should show up" width="1920"/>
+                <img src="d2fc77c4bfa1509f6ba541abb1f2d32ac4f6d91fa2cc9a3bfceb064e41227070.png" title=" Then the batch number should be shown in the voucher match successfully created modal" width="1920"/>
+                <img src="d2fc77c4bfa1509f6ba541abb1f2d32ac4f6d91fa2cc9a3bfceb064e41227070.png" title=" Then the batch number should be shown in the voucher match successfully created modal (completed)" width="1920"/>
+                <img src="d2fc77c4bfa1509f6ba541abb1f2d32ac4f6d91fa2cc9a3bfceb064e41227070.png" title=" Then the 'Voucher Match Successfully Created' modal should show up (completed)" width="1920"/>
+                <img src="7779eeb15428c9db1124cea4b6a5f653cd9e9e9e7b7ce061dcc580edceaa2cf4.png" title=" When I click on 'Exit' button from modal" width="1920"/>
+                <img src="c771d86a578de6cd6535b15c870d17043fe3e88dc79fd84671cfce1d36b88c90.png" title=" When I click on 'Exit' button from modal (completed)" width="1920"/>
+                <img src="5b22899dbec720a7ff3db903c43a3e90b78cc0b34118787898c3451098b386eb.png" title=" When I open the 'Batch Posting' page" width="1920"/>
+                <img src="5b22899dbec720a7ff3db903c43a3e90b78cc0b34118787898c3451098b386eb.png" title=" When i open page from sidebar menu: {Batch Posting}" width="1920"/>
+                <img src="de647d11fdb485df642212ec0ebcf85305dc2b2f4fb1e5b876251feb54721e3e.png" title=" When i open page from sidebar menu: {Batch Posting} (completed)" width="1920"/>
+                <img src="de647d11fdb485df642212ec0ebcf85305dc2b2f4fb1e5b876251feb54721e3e.png" title=" When I open the 'Batch Posting' page (completed)" width="1920"/>
+                <img src="b5e3c176761c2c61f1c55b555bd8017e3ba78ab7bb73150ea42d32b6bb0fcf7a.png" title=" When I set the 'Batch Number' using the previously generated value from Pre registration modal" width="1920"/>
+                <img src="d003dd911d9ef202bffe663283afbf7725717a0d01c9a3204b510cb61818d12a.png" title=" When i clear the batch type field" width="1920"/>
+                <img src="d003dd911d9ef202bffe663283afbf7725717a0d01c9a3204b510cb61818d12a.png" title=" When i clear the batch type field (completed)" width="1920"/>
+                <img src="b9a4dc1d4070ad01100fb5da6322a64b0e13ab2ca39b3568ae684939b7de3908.png" title=" When i click on search button" width="1920"/>
+                <img src="5e3fbb0e77be5828b38a1958d084aec3994c036e358638a06402e6e99f025710.png" title=" When i click on search button (completed)" width="1920"/>
+                <img src="5e3fbb0e77be5828b38a1958d084aec3994c036e358638a06402e6e99f025710.png" title=" Then the batch posting search results should show up" width="1920"/>
+                <img src="5e3fbb0e77be5828b38a1958d084aec3994c036e358638a06402e6e99f025710.png" title=" Then the post button of the first batch posting search result should be disabled" width="1920"/>
+                <img src="db2bc8a23effcfaf51701d72e15bfec9ac1c94403f00953e7cd6552aa819d530.png" title=" When I click 'See More' button" width="1920"/>
+                <img src="57f20628c58f21b587e2932fe22e6cdf4ac9fbf42904da3d0e579a8ad92c6f42.png" title=" When I click 'See More' button (completed)" width="1920"/>
+                <img src="cefb52456ea0e819d31a63aaf6eb7709ab089f41c14790d5fecf9af23664ad0d.png" title=" Then the post button of the first batch posting search result should be enabled" width="1920"/>
+                <img src="cdb0c8c1e83fd992bff6bb6a5fb323e1318c33148670e24feb67c05eb8b644e2.png" title=" When i click post button" width="1920"/>
+                <img src="7774fbc9fd4b623418285e06f9765746b3c83649541a15b259275c0b7a97e1d1.png" title=" When i click post button" width="1920"/>
+                <img src="271473d87b35c1a706b0057a1954ec4a0b328ef036aaf1c60c2431fb51af0f47.png" title=" When i click post button (completed)" width="1920"/>
+                <img src="271473d87b35c1a706b0057a1954ec4a0b328ef036aaf1c60c2431fb51af0f47.png" title=" Then the 'Batch Successfully Posted' notification message should show up" width="1920"/>
+                <img src="bf0284ea4f98a462b98b11150636b364f0190cc523ccbbe3bc6b7d565f2c6f18.png" title=" Then the 'Reverse Void' button should be enabled" width="1920"/>
+                <img src="bf0284ea4f98a462b98b11150636b364f0190cc523ccbbe3bc6b7d565f2c6f18.png" title=" Then the 'Reverse Void' button should be enabled (completed)" width="1920"/>
+                <img src="22bc0218056657486d3fd7d6e6636f9190f6c6dcfd3a2f2a3b159d6cfad0b618.png" title=" When I click 'Reverse Void' button" width="1920"/>
+                <img src="ecaf3642f9c45ade0223cee4a709cf9884d7e7dd93ab4d4f92f607697ac9fbc6.png" title=" When I click 'Reverse Void' button (completed)" width="1920"/>
+                <img src="ecaf3642f9c45ade0223cee4a709cf9884d7e7dd93ab4d4f92f607697ac9fbc6.png" title=" Then the 'Void Journal Entry' modal should show up" width="1920"/>
+                <img src="c3f13abcffbe918b67219c42d072aebbe8a5e7807f3c9c9e14389319021e192a.png" title=" When I click on modal 'Confirm' button" width="1920"/>
+                <img src="0a38679987ec34ea99e804e1e16ef4f39df567aee2cb0884a683f3bde120b522.png" title=" When I click on modal 'Confirm' button (completed)" width="1920"/>
+                <img src="0a38679987ec34ea99e804e1e16ef4f39df567aee2cb0884a683f3bde120b522.png" title=" Then the 'Document Reversed Successfully' notifiaction message should show up" width="1920"/>
+                <img src="e5898900f722187c5b1b3973e3f58e501343dd7e4707d9cd86e46669805a9ba5.png" title=" When i click post button" width="1920"/>
+                <img src="21cd28b55a8e77813532f7aba489eb8cdbe03bc73f81507574fc4e51a53a2c17.png" title=" When i click post button" width="1920"/>
+                <img src="05a2d32169e2ec64e909f72397608c49dd75fe0932ffd43b97e4cfb7a906a4b7.png" title=" When i click post button" width="1920"/>
+                <img src="a2682efddccff7a6e78afb4e795878e544fba61a3bc3bb0ff4d35dbfd3079b9a.png" title=" When i click post button (completed)" width="1920"/>
+                <img src="6aa614be1f1228da828cb5deb7eca846c182b916c127d65dff826d8bec283d28.png" title=" Then the 'Batch Successfully Posted' notification message should show up: <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.6</span>
+</div>
+</body>
+</html>
