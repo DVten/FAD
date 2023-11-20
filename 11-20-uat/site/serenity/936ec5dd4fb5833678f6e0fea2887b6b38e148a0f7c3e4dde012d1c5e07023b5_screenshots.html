@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="a38e4d4bca738cf85e1147d06801ee0116703d1ffcebfbd5ad12208ff84200fc.html">Batch Posting</a></span>
+                > <span class="truncate-60"><a
+                    href="936ec5dd4fb5833678f6e0fea2887b6b38e148a0f7c3e4dde012d1c5e07023b5.html">Batch posting voiding process </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 20-11-2023 12:30</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Batch Posting </span>
+                                    <span class="badge tag-badge" style="">Story</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Batch posting voiding process
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="68d4b9711c16879f05e192c644c517d9fcd1c634f06c4432f115b414666c7145.png" title=" Given that I'm logged in to 'General Ledger Entry' page" width="1920"/>
+                <img src="68d4b9711c16879f05e192c644c517d9fcd1c634f06c4432f115b414666c7145.png" title=" When i open FAD URL" width="1920"/>
+                <img src="68d4b9711c16879f05e192c644c517d9fcd1c634f06c4432f115b414666c7145.png" title=" When i open page from sidebar menu: {General Ledger,General Ledger Entries}" width="1920"/>
+                <img src="d8076b66633cf4e1c9f5efa8b6d92da327ae8f693ebb950683c3a2932584e115.png" title=" When i open page from sidebar menu: {General Ledger,General Ledger Entries}" width="1920"/>
+                <img src="0c0be9d139f5426ed904ea2d95e2b231be5dd4cef8cf090107197bd6ab162a01.png" title=" When i open page from sidebar menu: {General Ledger,General Ledger Entries}" width="1920"/>
+                <img src="01ccb0cc9bfb0a860580d3ab19637916eb3cbbaa9208a2b83792625d3d06c90c.png" title=" When i open page from sidebar menu: {General Ledger,General Ledger Entries} (completed)" width="1920"/>
+                <img src="01ccb0cc9bfb0a860580d3ab19637916eb3cbbaa9208a2b83792625d3d06c90c.png" title=" Given that I'm logged in to 'General Ledger Entry' page (completed)" width="1920"/>
+                <img src="01ccb0cc9bfb0a860580d3ab19637916eb3cbbaa9208a2b83792625d3d06c90c.png" title=" Then the 'G/L Header Information' page should show up" width="1920"/>
+                <img src="fea0fa566edba807f74b290c76779796d11e3641169f8842626961f16263b0ca.png" title=" When I set the currency to 'USD'" width="1920"/>
+                <img src="2c882893e6f35660cd10b3414f585b64c42a4de6c44318d3ed16663b9364a9b8.png" title=" When I set the currency to 'USD' (completed)" width="1920"/>
+                <img src="0fc5f7a67700f18185544f573382547b347bde27445d6f156e8747fe3d626fa0.png" title=" When I set the description to 'TEST1'" width="1920"/>
+                <img src="64224a0e7876b9fecf89150622e6e6dcde8f4d2888625f1661f97d2d8071944e.png" title=" When I click 'Continue' button" width="1920"/>
+                <img src="64224a0e7876b9fecf89150622e6e6dcde8f4d2888625f1661f97d2d8071944e.png" title=" When I click 'Continue' button (completed)" width="1920"/>
+                <img src="7d3c46c550b6bec4df39258bf7e501119df490fb2e208f9cc6a1a931fb4db7ce.png" title=" When I set the Account Number to '900700'" width="1920"/>
+                <img src="8c807015013812c5fcb71112a17bab733d8ad447a2e9f49f13899a52b45dc215.png" title=" When I set the Account Number to '900700' (completed)" width="1920"/>
+                <img src="9b7d3be40e0b4f79a956668dc2c4d01ac996b3cbc7db64d199b491bb17a95d6b.png" title=" When I set the Line Description to 'TEST1'" width="1920"/>
+                <img src="43697c4a01bc5c82b0f216bd4bc3e17c311ea6c2e71283aa4bda3673ef17c089.png" title=" When I set the Amount to '1000'" width="1920"/>
+                <img src="0436ebfc2272a5aa32da4ac47e813eb17efba1da0b8005ed2a2e56036b57dcdd.png" title=" When I set the Employee to 'Taramarcaz'" width="1920"/>
+                <img src="1baafc14da08ae963a0ba681b1777d8cd1857a98aba1cf19f41cdbca5dd65f6f.png" title=" When I set the Employee to 'Taramarcaz' (completed)" width="1920"/>
+                <img src="8dc7fa679908458f7518d663d1c9a4e0cc1076664387430ec9653f02d7488021.png" title=" When I set the General Obj to 'AFGHAIG'" width="1920"/>
+                <img src="4f3677dc7999e302547ea879fa52d7d4b8caa535dc89bfd9df7d4f6187a860d2.png" title=" When I set the General Obj to 'AFGHAIG' (completed)" width="1920"/>
+                <img src="05a3232d913b8a60a8c0ecddc7cf7686fdecb8b7ca6acdae8980d5ab6576d92d.png" title=" When I click the 'Select Cash' Button" width="1920"/>
+                <img src="05a3232d913b8a60a8c0ecddc7cf7686fdecb8b7ca6acdae8980d5ab6576d92d.png" title=" When I click the 'Select Cash' Button (completed)" width="1920"/>
+                <img src="498e4c8d7e7a6859e3eb2014d116e4cd56934eb38f82a6eb6e2b84b8f0eb7a63.png" title=" Then the 'Select CASH Account' modal should show up" width="1920"/>
+                <img src="ce628c7a87b01c47311d6a33f8cd01a4c841c82f18f0f9e2fe2644a344057fd7.png" title=" When I select first checkbox from 'Select Cash' modal" width="1920"/>
+                <img src="ce628c7a87b01c47311d6a33f8cd01a4c841c82f18f0f9e2fe2644a344057fd7.png" title=" When I select first checkbox from 'Select Cash' modal (completed)" width="1920"/>
+                <img src="4bf3d956cd955955ddc518290dc93e4d481252ccd945a631f232bcb464277d7b.png" title=" When I click 'Submit' button" width="1920"/>
+                <img src="4bf3d956cd955955ddc518290dc93e4d481252ccd945a631f232bcb464277d7b.png" title=" When I click 'Submit' button (completed)" width="1920"/>
+                <img src="f41175c023392c8db49cf2e13f6b6fb20f015d080c23caa30e25ae8ec99f6238.png" title=" When I click 'Proceed' button" width="1920"/>
+                <img src="f41175c023392c8db49cf2e13f6b6fb20f015d080c23caa30e25ae8ec99f6238.png" title=" When I click 'Proceed' button (completed)" width="1920"/>
+                <img src="b3cd0110e330b45df7c6ce36031d953597ceb245aaaad5f491ebf5fa2b4fc5f9.png" title=" Then the 'General Ledger Entry successfully created' modal should show up" width="1920"/>
+                <img src="27d4c89b5bf775f96d743769d4358fd2c673a5f65f5f0af763b314b186e3ec14.png" title=" Given that I'm logged in to 'Batch Posting' page" width="1920"/>
+                <img src="27d4c89b5bf775f96d743769d4358fd2c673a5f65f5f0af763b314b186e3ec14.png" title=" When i open FAD URL" width="1920"/>
+                <img src="27d4c89b5bf775f96d743769d4358fd2c673a5f65f5f0af763b314b186e3ec14.png" title=" When i open page from sidebar menu: {Batch Posting}" width="1920"/>
+                <img src="0fcd715d4d25a3cb2b11c534b35ed99c5a0410bffaee00085b480e90275d0710.png" title=" When i open page from sidebar menu: {Batch Posting}" width="1920"/>
+                <img src="de647d11fdb485df642212ec0ebcf85305dc2b2f4fb1e5b876251feb54721e3e.png" title=" When i open page from sidebar menu: {Batch Posting} (completed)" width="1920"/>
+                <img src="de647d11fdb485df642212ec0ebcf85305dc2b2f4fb1e5b876251feb54721e3e.png" title=" Given that I'm logged in to 'Batch Posting' page (completed)" width="1920"/>
+                <img src="0e725884fc4a6c8a48eb225e7b072395c555a0a5f465018c2ee19659b8c2a429.png" title=" When I set the Batch Number using the previously generated value" width="1920"/>
+                <img src="6240a1087fcb3d8e1c086136e1899d140d2df5284b89bb8a7d41abbb855b6083.png" title=" When I click 'Search' button" width="1920"/>
+                <img src="6240a1087fcb3d8e1c086136e1899d140d2df5284b89bb8a7d41abbb855b6083.png" title=" When I click 'Search' button (completed)" width="1920"/>
+                <img src="c50e052917357031cd25ed6815dd02cf26c3fa22c3562a122861e2da11587c2c.png" title=" When I click 'See More' button" width="1920"/>
+                <img src="544b68074ebca7e378528343764790ccafc35bef1035c39d979b4a295f28bad8.png" title=" When I click 'See More' button (completed)" width="1920"/>
+                <img src="4cafa36dbc9a475d8bb11349eaac24547dfbb984d9eb4c5714f046388a658b1b.png" title=" When I click 'Post' button" width="1920"/>
+                <img src="277e09522c33f14adcf981de5a8a09f18ce7feef9114263c4826599888af7997.png" title=" When I click 'Post' button" width="1920"/>
+                <img src="cc2a8368850ca8da8887cd54d4b5a253296272dc2e3f46abbf70f2c1ad95d668.png" title=" When I click 'Post' button (completed)" width="1920"/>
+                <img src="cc2a8368850ca8da8887cd54d4b5a253296272dc2e3f46abbf70f2c1ad95d668.png" title=" Then the 'Batch Successfully Posted' notification message should show up" width="1920"/>
+                <img src="b68cbc9d02584abc9cf8e5b8d3006ddcdfd926f524ea53cd7a99efcadb664850.png" title=" Then the 'Reverse Void' button should be enabled" width="1920"/>
+                <img src="02a9fc2a705bdb46cc387ad5a2bda741ffbf40b6745d0427d7214fb7899aa818.png" title=" When I click 'Reverse Void' button" width="1920"/>
+                <img src="8aa8409f9c784d9a124261da7cc671e340194f4a935e8d219978ba0140e159ea.png" title=" When I click 'Reverse Void' button (completed)" width="1920"/>
+                <img src="8aa8409f9c784d9a124261da7cc671e340194f4a935e8d219978ba0140e159ea.png" title=" Then the 'Void Journal Entry' modal should show up" width="1920"/>
+                <img src="205e9bed3e2e66557eb1cee7eca92daaea90d20a0631b36497692364d232cab1.png" title=" When I click on modal 'Confirm' button" width="1920"/>
+                <img src="0eaa3fde92bfb575b2ced159fc345c4ae7c6a3f28ad1dc3f22d78d6f2c6c1c84.png" title=" When I click on modal 'Confirm' button (completed)" width="1920"/>
+                <img src="0eaa3fde92bfb575b2ced159fc345c4ae7c6a3f28ad1dc3f22d78d6f2c6c1c84.png" title=" Then the 'Document Reversed Successfully' notifiaction message should show up" width="1920"/>
+                <img src="3d6b899311ed9b12491c058a65e714f7b5d4a5540fbfed50d6dad3a47e0ae8e2.png" title=" When I click 'Post' button" width="1920"/>
+                <img src="cea0c4340915862018c7edcf6c269ad22ba76734337333706742a0ae755ec02c.png" title=" When I click 'Post' button" width="1920"/>
+                <img src="a630a11e577054ec70dc47c2b660ed48643f11d3d7c4194842ec22e1482abd44.png" title=" When I click 'Post' button" width="1920"/>
+                <img src="3ff7ee34c012e4ec73cae289fe7a6a61dfee63ab8ad9bada12017415aa7f9154.png" title=" When I click 'Post' button (completed)" width="1920"/>
+                <img src="dafb7a439d9287c0eb0ed9fd1ec929d5e813f709e8cf5049c2bdeb0590c52c1d.png" title=" When I click on 'Print' button" width="1920"/>
+                <img src="dafb7a439d9287c0eb0ed9fd1ec929d5e813f709e8cf5049c2bdeb0590c52c1d.png" title=" When I click on 'Print' button (completed)" width="1920"/>
+                <img src="7a5124d596d4b753efad1073a21f2c9e731911933873ae8632fd4306a643f2d7.png" title=" Then the 'Batch Successfully Sent To Print' notification message should show up: <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.6</span>
+</div>
+</body>
+</html>
