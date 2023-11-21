@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="799cad7a8b0bc7a0b3e1699862a84d040577207f1ce4f08b8189b6ccbce5a6bf.html">Voucher Entries</a></span>
+                > <span class="truncate-60"><a
+                    href="b4fb8bf7ee4775a79c756bf9d77c6ce73b5097622de0cd9718550d3175f71da3.html">Release retention partial </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 21-11-2023 12:10</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Voucher Entries </span>
+                                    <span class="badge tag-badge" style="">Story</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="error-color">Release retention partial
+                                    <span class="related-issue-title">(VR02)</span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Number format exception: empty String</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.NumberFormatException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>pageobjects.IRIS.FAD.FADGenericPage.isInputValueSet(FADGenericPage.java:248)<br />pageobjects.IRIS.FAD.FADGenericPage.multipleTypeIntoInputPerCharacter(FADGenericPage.java:231)<br />pageobjects.IRIS.FAD.FADGenericPage.multipleTypeIntoInputPerCharacter(FADGenericPage.java:222)<br />pageobjects.IRIS.FAD.FADGenericPage.tryToTypeIntoLabeledTextFieldByMultipleTries(FADGenericPage.java:217)<br />pageobjects.IRIS.FAD.ReleaseRetentionPage.setPaymentAmountGrossAmount(ReleaseRetentionPage.java:55)<br />steps.IRIS.FAD.ReleaseRetentionSteps.when_I_set_the_gross_amount_equal_to_the_retained_to_release_amount_value(ReleaseRetentionSteps.java:77)<br />org.icrc.fadapplic.IRIS.FAD.AccountsPayable.VoucherEntries.releaseRetentionPartial(VoucherEntries.java:1675)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource597941708560193603.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="1f8f8fd28b25bbcf2d7215ffadc5c7859cdcb44edad750bd8e34abbbc97fd1dc.png" title=" Given that im logged into prepayments page" width="1920"/>
+                <img src="1f8f8fd28b25bbcf2d7215ffadc5c7859cdcb44edad750bd8e34abbbc97fd1dc.png" title=" When i open FAD URL" width="1920"/>
+                <img src="1f8f8fd28b25bbcf2d7215ffadc5c7859cdcb44edad750bd8e34abbbc97fd1dc.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Release Retention}" width="1920"/>
+                <img src="170f20a6041638a58c702a01c1a4dfb4c4901514263a9e0ff40a561d05c35583.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Release Retention}" width="1920"/>
+                <img src="275a30f131a565b9aead7a0364187ac1e2029575e1153aad28cb9d1ea3e7cb92.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Release Retention}" width="1920"/>
+                <img src="920286396d206f7fbd5d5932634780692da69185d273b1c049b4d6e63b7fd717.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Release Retention}" width="1920"/>
+                <img src="87f0672406ba0583e42da2bd7bcf165d28ef1b9ddad438c317cc38ad257c0e09.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Release Retention} (completed)" width="1920"/>
+                <img src="87f0672406ba0583e42da2bd7bcf165d28ef1b9ddad438c317cc38ad257c0e09.png" title=" Given that im logged into prepayments page (completed)" width="1920"/>
+                <img src="87f0672406ba0583e42da2bd7bcf165d28ef1b9ddad438c317cc38ad257c0e09.png" title=" Then the release retention search page and its contents should show up" width="1920"/>
+                <img src="c2ae25defff5d1201b103dd296bef4bc35e6e4ae3902b0c9227d8bf624956d3e.png" title=" When I set the supplier to '133339'" width="1920"/>
+                <img src="4a86e6caa50338334f123823cfe61343b03eef9ce213de985e5545e619766722.png" title=" When I set the supplier to '133339' (completed)" width="1920"/>
+                <img src="1a10726ca93d0cdf478b563c52f7f556c372b1ebac1b79c014a852501d110d32.png" title=" When i clear the business unit" width="1920"/>
+                <img src="1a10726ca93d0cdf478b563c52f7f556c372b1ebac1b79c014a852501d110d32.png" title=" When i clear the business unit (completed)" width="1920"/>
+                <img src="660847c6bba361ab0d01150ddb306ef72edac4aa32d83d3f428d6bab9cab2eb0.png" title=" When I set the 'Currency' to 'USD'" width="1920"/>
+                <img src="0e81a4b78eab6017c04b11ee0d194df5374b18738deb81f560df62920c5be00c.png" title=" When I set the 'Currency' to 'USD' (completed)" width="1920"/>
+                <img src="d5455a2c88281f7104f671bc2a383b9e28d9abfa5238b3dbb9ff120e1fba9c21.png" title=" When i click on search button" width="1920"/>
+                <img src="3cb4a32f566e26dfaa62e57ea75b990b53ca12f6173a5fca1e866f8292b096b9.png" title=" When i click on search button (completed)" width="1920"/>
+                <img src="3cb4a32f566e26dfaa62e57ea75b990b53ca12f6173a5fca1e866f8292b096b9.png" title=" Then release retention search result should show up" width="1920"/>
+                <img src="edb5a61114438c01271f019ba1f48355e734076dc34ddbe2e66fe36728825371.png" title=" When i click on see more details of the first search result" width="1920"/>
+                <img src="edb5a61114438c01271f019ba1f48355e734076dc34ddbe2e66fe36728825371.png" title=" When i click on see more details of the first search result (completed)" width="1920"/>
+                <img src="eb317cf7e0bed2f9b9c6fa84bc12fb1ad1118ffccd18cfaf532598fd38c11ce7.png" title=" When i select the first line from the first search result" width="1920"/>
+                <img src="eb317cf7e0bed2f9b9c6fa84bc12fb1ad1118ffccd18cfaf532598fd38c11ce7.png" title=" When i select the first line from the first search result (completed)" width="1920"/>
+                <img src="b2b4a06a8de09c9264aafb4c1debce6804417c1a991b06c88d6cd29e0ef8ab90.png" title=" When i click on release button" width="1920"/>
+                <img src="40b72e164c526fe6c610e1c5043ec760f0f22989ba5bcaf7484c1b3d26931426.png" title=" When i click on release button" width="1920"/>
+                <img src="37c878c71ef3b92cbc09b5db013f99a5636c14eca767a5342a0f695dc11222f6.png" title=" When i click on release button (completed)" width="1920"/>
+                <img src="37c878c71ef3b92cbc09b5db013f99a5636c14eca767a5342a0f695dc11222f6.png" title=" Then the Payment Information form and its contents should show up" width="1920"/>
+                <img src="51c352083f1c8a46c69f55e46e9363733dc340a61a984c332102f17040b23677.png" title=" When I set the 'Invoice Number' to '2bwtO9YsvO'" width="1920"/>
+                <img src="a899c59c33dbdde81174bcde75ca1a778dca851d3815e9f12dde69ac9f81c7dc.png" title=" When i click on continue button" width="1920"/>
+                <img src="343fb844b1065c4fbd0b4aca1e51510034716c3e0c6b5d316c967fb99d595c4e.png" title=" When i click on continue button (completed)" width="1920"/>
+                <img src="4b105eca0e4fdae0c8582501dedae094d54c4f10a104473491d035ac767ab8d0.png" title=" Then the 'Select Bank Account' modal should show up" width="1920"/>
+                <img src="10da9e8749f12df1824c26b9a7ec25e578d6a0f9d5d45809f2d3e465af8a351a.png" title=" When I select the checkbox of the first bank account" width="1920"/>
+                <img src="10da9e8749f12df1824c26b9a7ec25e578d6a0f9d5d45809f2d3e465af8a351a.png" title=" When I select the checkbox of the first bank account (completed)" width="1920"/>
+                <img src="b5b39d409dbe10aac2ee8b98d756385fc94d14852945f59aad90cceb8139a9c3.png" title=" When I click on 'Submit' button from 'Select Bank Account' modal" width="1920"/>
+                <img src="30aa8226104251aba8cea1130b3d9511b252e6fc5ac3f5ca5f77298904fb794d.png" title=" When I click on 'Submit' button from 'Select Bank Account' modal (completed)" width="1920"/>
+                <img src="30aa8226104251aba8cea1130b3d9511b252e6fc5ac3f5ca5f77298904fb794d.png" title=" Then the 'Payment Amount' form and its contents should show up" width="1920"/>
+                <img src="085543656bdcfc169a3b38a3cac2456c5a618edd5b619b9586a68cf6913f934f.png" title=" When i set the retained to release equal to half of retained amount value" width="1920"/>
+                <img src="17af6da9d197892cd65bd64cb804e5739d6b827ece3a98800a37e1a8a8ceea3e.png" title=" When i set the retained to release equal to half of retained amount value (completed)" width="1920"/>
+                <img src="3cd3cf6fe4fe8dd9334a7badf7596ce9bf97c327bc538cf29eed98256c27e3e6.png" title=" When I click on 'Validate' button" width="1920"/>
+                <img src="68bf88db9a07e75b0bd5db128d1984dc038b925855147fa4e0efec77f89fad80.png" title=" When I click on 'Validate' button (completed)" width="1920"/>
+                <img src="5e2e97488ee0e183638a72a5ea40dc21ede033032b54e18abbcdd59be7136eab.png" title=" When i set the gross amount equal to the retained to release amount value: <span class='error-color'>ERROR</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.6</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="61d58fa0035e695633a8c43c603a0ed142a92bc4227ceccb623a1c7595ae5a6b.html">Supplier Creation</a></span>
+                > <span class="truncate-60"><a
+                    href="5a02944a96cb56548a065cba97a9b82550a403193cfb7d4d8ddd6521037a1eb6.html">Payment terms update </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 21-11-2023 11:18</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Supplier Creation </span>
+                                    <span class="badge tag-badge" style="">Story</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Payment terms update
+                                    <span class="related-issue-title">(SPRINT7)</span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="b52eacb7ba89a43c496095f8959053449541e0ba06432f7e0b7de4134fcd12fd.png" title=" Given that I'm logged in to 'Supplier Creation' page" width="1920"/>
+                <img src="b52eacb7ba89a43c496095f8959053449541e0ba06432f7e0b7de4134fcd12fd.png" title=" When i open FAD URL" width="1920"/>
+                <img src="b52eacb7ba89a43c496095f8959053449541e0ba06432f7e0b7de4134fcd12fd.png" title=" When i open page from sidebar menu: {Supplier Management,Supplier Creation}" width="1920"/>
+                <img src="cfd6829a5bbeb2449886d168487ae18e11d2a7ee21794b5178c98f2cf4b2cc38.png" title=" When i open page from sidebar menu: {Supplier Management,Supplier Creation}" width="1920"/>
+                <img src="6d879f818699131b7e2798e0acbb10d439f429ca3c5ef9116731f54e94ccaf4b.png" title=" When i open page from sidebar menu: {Supplier Management,Supplier Creation}" width="1920"/>
+                <img src="e8ccb7113f69516c89e27d0e6364db7319e8d9a85112b568d87ec7660ae7b3cb.png" title=" When i open page from sidebar menu: {Supplier Management,Supplier Creation} (completed)" width="1920"/>
+                <img src="e8ccb7113f69516c89e27d0e6364db7319e8d9a85112b568d87ec7660ae7b3cb.png" title=" Given that I'm logged in to 'Supplier Creation' page (completed)" width="1920"/>
+                <img src="e8ccb7113f69516c89e27d0e6364db7319e8d9a85112b568d87ec7660ae7b3cb.png" title=" Then the 'Supplier Management' page and its contents should show up" width="1920"/>
+                <img src="1373e69999444f42b920d7f546eb60e98a88e7e68eb0cd59237a35b18ab0a389.png" title=" When I set the Supplier to '54556'" width="1920"/>
+                <img src="55458399c2a683c3f5de3d3515f2d89b0d1b5342598190d30aac78672500c6ca.png" title=" When I set the Supplier to '54556' (completed)" width="1920"/>
+                <img src="8f60d099bf05f863976cc5a259fc51df0bf75eab67c6f05f5f449d1109ecfb4f.png" title=" When i click on search button" width="1920"/>
+                <img src="d7938988bfd39356c7df3b58f9f64134aea04fa24c7f0600cc07074866fa4b99.png" title=" When i click on search button" width="1920"/>
+                <img src="9f872f0f34063daf8b5b5f32348459c968af02c5f92f7214c045b04e1c110e85.png" title=" When i click on search button (completed)" width="1920"/>
+                <img src="df5e4ce202636379faa2297745eda423eb1285fc7da14df3ba0be3a69d9e6bac.png" title=" When i click on edit button of the first supplier" width="1920"/>
+                <img src="f6552faa44c9d6b6c642e9b447018c3ec415bcd498ef9d42a519778eb3d641ee.png" title=" When i click on edit button of the first supplier (completed)" width="1920"/>
+                <img src="f6552faa44c9d6b6c642e9b447018c3ec415bcd498ef9d42a519778eb3d641ee.png" title=" Then the 'Supplier Address Book Creation' form should show up" width="1920"/>
+                <img src="f6552faa44c9d6b6c642e9b447018c3ec415bcd498ef9d42a519778eb3d641ee.png" title=" Then the 'Supplier Name' accordion form should open" width="1920"/>
+                <img src="237feeadf0ee477b717e29346ee6eb8460d8cccd08d4bca02eb8e1e6c04a9ea9.png" title=" When I set the 'Alpha Name' to 'TEST SUPPLIER EDITED'" width="1920"/>
+                <img src="871d86ebf67f350c43e433b98d51120f2ff9c4e1997680b856898110fb487eae.png" title=" When I click on accordion 'Continue' button" width="1920"/>
+                <img src="871d86ebf67f350c43e433b98d51120f2ff9c4e1997680b856898110fb487eae.png" title=" When I click on accordion 'Continue' button (completed)" width="1920"/>
+                <img src="e3fd95fcae02fc47f42d8ec3cc74d5f8e9347f123587fae24d87307221330726.png" title=" Then the 'Mailing List' accordion form should open" width="1920"/>
+                <img src="622dad9ac36977fd061f55037992d9882e2fe7141153b12bc677559f1b9c13f5.png" title=" When I click on 'Add' button" width="1920"/>
+                <img src="4fb089855cf2476827c178393f5401817cddcd19fda5c1f9d28aff07bc709196.png" title=" When I set the 'City' to 'Makati'" width="1920"/>
+                <img src="f8de5ee2fd9ed1f51727ee020aaece07c666cf12f406b826e813f07cfdbf3260.png" title=" When I set the 'Country' to 'Philippines'" width="1920"/>
+                <img src="9dc2708df3ae7ecf8c8bbf37e275426816cda87949f5987267c635c8695debc3.png" title=" When I set the 'Country' to 'Philippines' (completed)" width="1920"/>
+                <img src="51a4f0e98ca1f92a742d89e20c7d2de1401744a4d06466ef252811266ef71fc2.png" title=" When I click on accordion 'Continue' button" width="1920"/>
+                <img src="51a4f0e98ca1f92a742d89e20c7d2de1401744a4d06466ef252811266ef71fc2.png" title=" When I click on accordion 'Continue' button (completed)" width="1920"/>
+                <img src="e5b9f4c10b13bb6f7f98de3c73cb203f91ad0b640828eec352d89af89ea7f687.png" title=" Then the 'Contact Information' accordion form should open" width="1920"/>
+                <img src="6054fe237292f08f4524dd36803cc9bd75d66bd72eeb22e7a9bb65ea2ec04aeb.png" title=" When I click on footer 'Continue' button" width="1920"/>
+                <img src="6054fe237292f08f4524dd36803cc9bd75d66bd72eeb22e7a9bb65ea2ec04aeb.png" title=" When I click on footer 'Continue' button (completed)" width="1920"/>
+                <img src="705da75c887ad69ab1dde6fad23e6c1ec2b7236f08677ec44190f49f309ed6fb.png" title=" Then the 'Supplier Master Creation' form should show up" width="1920"/>
+                <img src="17751f05a28b0885f458b71b46c78e762c8b19349a8b721bae2ee076d55895a3.png" title=" Then the 'Internal Information Part 1' accordion form should open" width="1920"/>
+                <img src="64faba3777eb00bd9b380fd06bbc029668d9519f75449896a9fb1903319be2bf.png" title=" When I set the 'Supplier Currency' to 'PHP'" width="1920"/>
+                <img src="fc63bf86a4761fa9ae325ef88ae5050e69e482bc068cb2ebc8f482222657b922.png" title=" When I set the 'Supplier Currency' to 'PHP' (completed)" width="1920"/>
+                <img src="ed90dff456b23058b1cbcae04c95d88684de82e7b3865f6b9dea977f92415fb5.png" title=" When I set the Tax Rate/Area to 'KF1'" width="1920"/>
+                <img src="4cecfbd7e07b02cc7605be9705c9b012e485abf7098538b75e414db7b3e4e566.png" title=" When I set the Tax Rate/Area to 'KF1' (completed)" width="1920"/>
+                <img src="fe484693547d7ff093ad369616bae10df044d114f4b07fe7987ba0e281f21c8f.png" title=" When I type the 'Payment Terms' to '30'" width="1920"/>
+                <img src="8577bca51f0ffa7586573ddc7dbcbdf394051ad68d6c7f0a3a7791463473194a.png" title=" Then the payment terms dropdown options should be empty" width="1920"/>
+                <img src="f4e8a3634eaaa1e5e7f29a29f405d492436a91cd01ecf496c4c80bbf65bd799b.png" title=" When I type the 'Payment Terms' to '030'" width="1920"/>
+                <img src="5dbafca01531d75fb09abfc70090b49cdb44c55e40d135b3e4ab8d88fcbdebb4.png" title=" Then the payment terms dropdown options should display a single option" width="1920"/>
+                <img src="800fc504074d6c0abb62e1c6e2e65840778008dfd9127597314fd7c642ba8fd2.png" title=" When I set the 'Payment Terms' to '030'" width="1920"/>
+                <img src="bba36e708a4663b273c9f0c4a05e390882b3e9611441f363c0cfe4edf7bde8fc.png" title=" When I set the 'Payment Terms' to '030'" width="1920"/>
+                <img src="a030f5492288b259bd50dc463aac783692bb7c7c2a0e402ef78c527009397cd1.png" title=" When I set the 'Payment Terms' to '030' (completed)" width="1920"/>
+                <img src="15c996f5af1c7e419a0eb43ee987bd58976916a60add0b81b4a399ae760c1752.png" title=" When I set the 'Payment Instrument' to 'Cash Payment'" width="1920"/>
+                <img src="ebeebd8c08a72f3f2a81dabe783b885b7ae7f8fc2ecac63c7e6426e82ff5ec94.png" title=" When I set the 'Payment Instrument' to 'Cash Payment'" width="1920"/>
+                <img src="0155565276f7f526a8138adc9279a7dd036383796465bd73706a12a602f1b274.png" title=" When I set the 'Payment Instrument' to 'Cash Payment' (completed)" width="1920"/>
+                <img src="9397e9a1843761fd21a0360eecb7a515031a346491fba94a44b0ec3a00b5782e.png" title=" When I click on accordion 'Continue' button" width="1920"/>
+                <img src="9397e9a1843761fd21a0360eecb7a515031a346491fba94a44b0ec3a00b5782e.png" title=" When I click on accordion 'Continue' button (completed)" width="1920"/>
+                <img src="d140e9268fb1c1969ecb2ad73b61a97a765d26eba787cd03b858b504fc759cae.png" title=" Then the 'Internal Information Part 1' accordion form should open" width="1920"/>
+                <img src="9020be2bc28568e1e934abfb58af9cd61546bf7db0d03b354e44b6b69ba8af33.png" title=" When I set the 'Adjustment Schedule' to 'SUPPLIER'" width="1920"/>
+                <img src="2e9f44e336ce5520fc1258f329262ad6c010ff51cd13a0b1d406ff578d4a8f21.png" title=" When I set the 'Adjustment Schedule' to 'SUPPLIER' (completed)" width="1920"/>
+                <img src="7c45d502c5eabb7184113517074720913bda0b907cfc55c26a22a44bfb294227.png" title=" When I click on 'Save' button" width="1920"/>
+                <img src="f446339554b176103f4e90e21237392c34d4ebfdca5afd90533d1fd4a5d619e3.png" title=" When I click on 'Save' button (completed)" width="1920"/>
+                <img src="36038eb6924626e34f08a685be59449b0615fe0637c959ab7e8e92276858a1fd.png" title=" Then the 'Vendor Addressbook Updated Successfully' modal should show up: <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.6</span>
+</div>
+</body>
+</html>

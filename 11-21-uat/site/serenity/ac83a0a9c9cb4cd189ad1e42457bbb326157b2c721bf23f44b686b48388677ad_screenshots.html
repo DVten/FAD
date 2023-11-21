@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="ed3cb233fb681327bc7cea0e6fefde8fecc5775d5eca15d7805c55ba7879d41d.html">Payments</a></span>
+                > <span class="truncate-60"><a
+                    href="ac83a0a9c9cb4cd189ad1e42457bbb326157b2c721bf23f44b686b48388677ad.html">Application of prepayment partial </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 21-11-2023 10:14</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Payments </span>
+                                    <span class="badge tag-badge" style="">Story</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Application of prepayment partial
+                                    <span class="related-issue-title">(MP04)</span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="3f4ac978b0db61fec7f5a76822d19e97b2bd2b0752f8d543ad2877634e0be115.png" title=" Given that im logged into prepayments page" width="1920"/>
+                <img src="3f4ac978b0db61fec7f5a76822d19e97b2bd2b0752f8d543ad2877634e0be115.png" title=" When i open FAD URL" width="1920"/>
+                <img src="3f4ac978b0db61fec7f5a76822d19e97b2bd2b0752f8d543ad2877634e0be115.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Prepayment}" width="1920"/>
+                <img src="68b6bcfb250043e1f25094d17fa48b7ee41595b3cdcff57a13c6eb6b77d33642.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Prepayment}" width="1920"/>
+                <img src="75f14fe2bd85a02c7e0ee288b9d600b5fbf4efba713890707a87e45720fd6943.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Prepayment}" width="1920"/>
+                <img src="b8767fcd5046b506df55f505ad5e4a875cd7eb9c700ebfb702736494b4fe9803.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Prepayment}" width="1920"/>
+                <img src="3d11bba5bedc5ef1a04cb73e03ecf59d576b2858d820ee09aa1d96dcee614df8.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Prepayment} (completed)" width="1920"/>
+                <img src="3d11bba5bedc5ef1a04cb73e03ecf59d576b2858d820ee09aa1d96dcee614df8.png" title=" Given that im logged into prepayments page (completed)" width="1920"/>
+                <img src="3d11bba5bedc5ef1a04cb73e03ecf59d576b2858d820ee09aa1d96dcee614df8.png" title=" Then the prepayment page and its contents should show up" width="1920"/>
+                <img src="b8e8586c007958d7b7ccfccd7cf3a7340e27537768cba6773977c8040ec8256f.png" title=" When I set the 'Supplier' to '220221'" width="1920"/>
+                <img src="28594ae76fb04fa4af5774eca2a00c7b2c8c896a2e1243d1c162dfe686eec5f9.png" title=" When I set the 'Supplier' to '220221' (completed)" width="1920"/>
+                <img src="3380a4301ec6181e5897b9b5fad097951b8ffcb9d9cdbc3c213c7fe0ec1e1d70.png" title=" When I set the 'Invoice Number' to 'nMmiaC3lDd'" width="1920"/>
+                <img src="1bb67d33c16847977d27c111789ea6b34dcb7fe93b443effd4792d8d472016a9.png" title=" When i click continue button" width="1920"/>
+                <img src="c7521ceee22d8ea6bef57666d165de6294025df74e024bda3a6cf635d068ee95.png" title=" When i click continue button (completed)" width="1920"/>
+                <img src="39427e53634d7b0eee30f85e540900bee8095d4f718b07a7f80998f1f4473ffa.png" title=" Then the payment amount form should show up" width="1920"/>
+                <img src="39427e53634d7b0eee30f85e540900bee8095d4f718b07a7f80998f1f4473ffa.png" title=" When i select the first bank account and click submit button if modal exist" width="1920"/>
+                <img src="776fe0b270f212e83316b672f3b708f02a982290a7ecd726af13b5300903112f.png" title=" When I set the 'Gross Amount' to '10000'" width="1920"/>
+                <img src="0e522c1062b7a022a21cc9b8591e574a4708aff7bdd9b1da300302ab2ee465c1.png" title=" When i click continue button" width="1920"/>
+                <img src="4957b86f1c7dc1ab6a7a0ff6a13f58fd50f78b2501cac5a713957a6f1fa53018.png" title=" When i click continue button (completed)" width="1920"/>
+                <img src="118949535d4495dff4d999150f0e54c47a973f998c9ca3070a43c1ef450c067a.png" title=" Then the prepayment successfully created modal and its contents should show up" width="1920"/>
+                <img src="118949535d4495dff4d999150f0e54c47a973f998c9ca3070a43c1ef450c067a.png" title=" Then the prepayment successfully created modal should show up" width="1920"/>
+                <img src="118949535d4495dff4d999150f0e54c47a973f998c9ca3070a43c1ef450c067a.png" title=" Then the batch number from prepayment successfully created modal should show up" width="1920"/>
+                <img src="118949535d4495dff4d999150f0e54c47a973f998c9ca3070a43c1ef450c067a.png" title=" Then the batch number from prepayment successfully created modal should show up (completed)" width="1920"/>
+                <img src="118949535d4495dff4d999150f0e54c47a973f998c9ca3070a43c1ef450c067a.png" title=" Then the document number from prepayment successfully created modal should show up" width="1920"/>
+                <img src="118949535d4495dff4d999150f0e54c47a973f998c9ca3070a43c1ef450c067a.png" title=" Then the document number from prepayment successfully created modal should show up (completed)" width="1920"/>
+                <img src="118949535d4495dff4d999150f0e54c47a973f998c9ca3070a43c1ef450c067a.png" title=" Then the prepayment successfully created modal and its contents should show up (completed)" width="1920"/>
+                <img src="b0ac8cdc39186f3d4073d2bc1705be104d1bceed1d87f0e5ff589675a83e2104.png" title=" When i click exit button" width="1920"/>
+                <img src="b0ac8cdc39186f3d4073d2bc1705be104d1bceed1d87f0e5ff589675a83e2104.png" title=" When i click exit button (completed)" width="1920"/>
+                <img src="1848807ba57fcf62e06172ce566d13841bbb9dccd784efe2fe10b7f7daa7559c.png" title=" Given that I'm logged in to 'Batch Posting' page" width="1920"/>
+                <img src="1848807ba57fcf62e06172ce566d13841bbb9dccd784efe2fe10b7f7daa7559c.png" title=" When i open FAD URL" width="1920"/>
+                <img src="1848807ba57fcf62e06172ce566d13841bbb9dccd784efe2fe10b7f7daa7559c.png" title=" When i open page from sidebar menu: {Batch Posting}" width="1920"/>
+                <img src="377cf88c63dc6f0ba38bec2621bdf1ab9caa5e740ad41bd5ffb7ace63ec49475.png" title=" When i open page from sidebar menu: {Batch Posting}" width="1920"/>
+                <img src="de647d11fdb485df642212ec0ebcf85305dc2b2f4fb1e5b876251feb54721e3e.png" title=" When i open page from sidebar menu: {Batch Posting} (completed)" width="1920"/>
+                <img src="de647d11fdb485df642212ec0ebcf85305dc2b2f4fb1e5b876251feb54721e3e.png" title=" Given that I'm logged in to 'Batch Posting' page (completed)" width="1920"/>
+                <img src="7e4d84b7c0860fb15bc608c7fdba9cd0cdc29a985bc5071784ad909a4c978e9c.png" title=" When i click on clear button" width="1920"/>
+                <img src="7e4d84b7c0860fb15bc608c7fdba9cd0cdc29a985bc5071784ad909a4c978e9c.png" title=" When i click on clear button (completed)" width="1920"/>
+                <img src="595a228e0aa5bb37bf2689efc0eceb6dd2bfd257f5db0b96c8d5bb42425d2f19.png" title=" When i set the batch type to all batches" width="1920"/>
+                <img src="32392698ca18fccc633647b4721a0db1de8defc823ff4187ad2a14f08abf28e7.png" title=" When i set the batch type to all batches (completed)" width="1920"/>
+                <img src="47dbe49beae25fc26219ad715a7a10b885b1112ca83947db0985a95e9f45e647.png" title=" When I set the Batch Number using the previously generated value" width="1920"/>
+                <img src="450bce6c3b0f1353a8aac16a998442a7c13a42a14997dbc43e5aab877ec94364.png" title=" When I click 'Search' button" width="1920"/>
+                <img src="450bce6c3b0f1353a8aac16a998442a7c13a42a14997dbc43e5aab877ec94364.png" title=" When I click 'Search' button (completed)" width="1920"/>
+                <img src="14083525d6daf0a8088c72a0b3d3de4473d5d517c640818417b87e07e878d1dd.png" title=" When I click 'See More' button" width="1920"/>
+                <img src="f382c7d166d04479ffe55d9fee1a6c647ac8db851a7f239e5d381377aa1f7b4d.png" title=" When I click 'See More' button (completed)" width="1920"/>
+                <img src="9ade61e0cea19117b703ef63dd8d540269aa0d366af45b535a7b793c71ac8eb6.png" title=" When i click on the first document row" width="1920"/>
+                <img src="10443ae48fbf2cf7037253b2ce208e3ac12d7eb4a458b37f814b154eec2c3c70.png" title=" When i click on the first document row (completed)" width="1920"/>
+                <img src="10443ae48fbf2cf7037253b2ce208e3ac12d7eb4a458b37f814b154eec2c3c70.png" title=" Then the voucher entry modal should show up" width="1920"/>
+                <img src="625b209bd42af53a17f63a4f42d216ed6ae7c6d4a0b2973c6299f04ec3723a03.png" title=" When i click on modal close button" width="1920"/>
+                <img src="625b209bd42af53a17f63a4f42d216ed6ae7c6d4a0b2973c6299f04ec3723a03.png" title=" When i click on modal close button (completed)" width="1920"/>
+                <img src="59f2752161a00f84c7a7742b365cd754ad3e1f5ff525e945eb04b5395ee906f3.png" title=" When I click 'Post' button" width="1920"/>
+                <img src="d0bcb586129b14e20660be560f51d99e8c2f82a371dd792bd4e9268e0eec9d6f.png" title=" When I click 'Post' button (completed)" width="1920"/>
+                <img src="d0bcb586129b14e20660be560f51d99e8c2f82a371dd792bd4e9268e0eec9d6f.png" title=" Then the 'Batch Successfully Posted' notification message should show up" width="1920"/>
+                <img src="dd18f1172df32e3c1c4ad5581629126ad581053701b05840453b14ce13d1a061.png" title=" Given that I'm logged into 'Manual Payment' page" width="1920"/>
+                <img src="dd18f1172df32e3c1c4ad5581629126ad581053701b05840453b14ce13d1a061.png" title=" When i open FAD URL" width="1920"/>
+                <img src="a239613aba698bd6faf9228bc3c8bfd4cf250c4f2a534ac1c57fbd03da9ff868.png" title=" When i open FAD URL (completed)" width="1920"/>
+                <img src="a239613aba698bd6faf9228bc3c8bfd4cf250c4f2a534ac1c57fbd03da9ff868.png" title=" When i open page from sidebar menu: {Accounts Payable,Payments,Manual Payment}" width="1920"/>
+                <img src="386f662bcc3f05bd760a353207d8c727119fd7fd32b50663a04e497fb2d7fc54.png" title=" When i open page from sidebar menu: {Accounts Payable,Payments,Manual Payment}" width="1920"/>
+                <img src="04d6fcd56c54e6589e359fa1b25878884e31583b54cb8b3f91d37b7a3597bc4e.png" title=" When i open page from sidebar menu: {Accounts Payable,Payments,Manual Payment}" width="1920"/>
+                <img src="c8ee34a10accad9ce8c544850f04bd235797493df1f1743a785a7df0653c3706.png" title=" When i open page from sidebar menu: {Accounts Payable,Payments,Manual Payment}" width="1920"/>
+                <img src="3f37572f747ce7a167b5b6df7ada3e8dd97c0c32aaef01f41bde7967cc752c37.png" title=" When i open page from sidebar menu: {Accounts Payable,Payments,Manual Payment} (completed)" width="1920"/>
+                <img src="3f37572f747ce7a167b5b6df7ada3e8dd97c0c32aaef01f41bde7967cc752c37.png" title=" Given that I'm logged into 'Manual Payment' page (completed)" width="1920"/>
+                <img src="3f37572f747ce7a167b5b6df7ada3e8dd97c0c32aaef01f41bde7967cc752c37.png" title=" Then that 'Manual Payment' page and its contents should show up" width="1920"/>
+                <img src="a6608ab689f3838639ef0ba29339c6e44e67713ba57a27f6b0009163a332b43f.png" title=" When I set the 'Supplier' to '220221'" width="1920"/>
+                <img src="37a6a0c7f5cf16ba804882137a5caf306a9ce4634997a900daf247a16f1cc54c.png" title=" When I set the 'Supplier' to '220221' (completed)" width="1920"/>
+                <img src="7f2042f69102e5761829e7a4a5af1bfd325af3ccd3da16a24cacd27b7bd33883.png" title=" When I set the Invoice Number to 'nMmiaC3lDd'" width="1920"/>
+                <img src="058091c53d9e28d04a2dcca7a7611aa4d42df386d379dc944a788cf49e12335e.png" title=" When I click on 'Search' button" width="1920"/>
+                <img src="4ab287aea02050d0c864fe521360cd76267d7092725d7975ed1fdfb7d768cb1d.png" title=" When I click on 'Search' button (completed)" width="1920"/>
+                <img src="825f5933f9ff9ffde2b7f059af017c12a0bea5bf72a8fcae59ad8a9ec7197c70.png" title=" Then the 'Open Invoices' section and its contents should show up" width="1920"/>
+                <img src="3d13fdf93b8e3c1106013d769e1701dab4f859668dfe0cb2d8f1480fb55ea542.png" title=" When I click the checkbox of the first enabled 'Open Invoices' row" width="1920"/>
+                <img src="3d13fdf93b8e3c1106013d769e1701dab4f859668dfe0cb2d8f1480fb55ea542.png" title=" When I click the checkbox of the first enabled 'Open Invoices' row (completed)" width="1920"/>
+                <img src="63cc65ff41c0080de8d2cfd7a45fa96d4a7a7898a825cf9b719f6ef1e381bda0.png" title=" When I click the 'Select Cash' button" width="1920"/>
+                <img src="31936ebdccdeaebfebb91b2e1cb300d835bfb190a4deb4e3cb1bc5247fe9ef68.png" title=" When I click the 'Select Cash' button (completed)" width="1920"/>
+                <img src="298827e4a96dee4bc60cb0c2365087eb78c284403fce3fb174dfe9b31aeef6dc.png" title=" Then the 'Select Cash Account' modal should show up" width="1920"/>
+                <img src="d34208fd1f15e8e8582793a254460f32b1ab9cb2984593223dc0efdf73be2790.png" title=" When I select the first account from 'Select cash account' modal" width="1920"/>
+                <img src="d34208fd1f15e8e8582793a254460f32b1ab9cb2984593223dc0efdf73be2790.png" title=" When I select the first account from 'Select cash account' modal (completed)" width="1920"/>
+                <img src="187c22ea1dbd52d035de47b6ce52139b6a8f8e67c57e2121b306d71bf199216e.png" title=" When I click the 'Submit' button from modal" width="1920"/>
+                <img src="05acf12dd928178041965a78a6eb3e5b6257b180f8a9311a43c006428ad29af5.png" title=" When I click the 'Submit' button from modal (completed)" width="1920"/>
+                <img src="05acf12dd928178041965a78a6eb3e5b6257b180f8a9311a43c006428ad29af5.png" title=" Then the payment summary should appear" width="1920"/>
+                <img src="c6c05fb32827ac009070acb62b9bef6c59d5de8a40507230714c8454c48188fc.png" title=" When I click on 'Proceed' button" width="1920"/>
+                <img src="b255cec786a139b36518d76ff23e0ac6f789e608ceebe4c457a93a4d10e56f7f.png" title=" When I click on 'Proceed' button (completed)" width="1920"/>
+                <img src="d826dc5a7e8024ef3283134642a7d07904b22809e8d36f0418d58146b77d8803.png" title=" Then the 'Manual Payment Successfully Created' modal should show up" width="1920"/>
+                <img src="d826dc5a7e8024ef3283134642a7d07904b22809e8d36f0418d58146b77d8803.png" title=" Then the manual payment successfully created modal should show up" width="1920"/>
+                <img src="d826dc5a7e8024ef3283134642a7d07904b22809e8d36f0418d58146b77d8803.png" title=" Then the batch number should be displayed in manual payment successfully created modal" width="1920"/>
+                <img src="916aa926fbdac2a52685dfb48e2ecfd00406be2b3de278be7130bc2d801de82f.png" title=" Then the batch number should be displayed in manual payment successfully created modal (completed)" width="1920"/>
+                <img src="916aa926fbdac2a52685dfb48e2ecfd00406be2b3de278be7130bc2d801de82f.png" title=" Then the payment number should be displayed in manual payment successfully created modal" width="1920"/>
+                <img src="916aa926fbdac2a52685dfb48e2ecfd00406be2b3de278be7130bc2d801de82f.png" title=" Then the payment number should be displayed in manual payment successfully created modal (completed)" width="1920"/>
+                <img src="916aa926fbdac2a52685dfb48e2ecfd00406be2b3de278be7130bc2d801de82f.png" title=" Then the 'Manual Payment Successfully Created' modal should show up (completed)" width="1920"/>
+                <img src="8fef9c5128d21c81d3ca3fe04a392e4f03160ae7dbb4172b2f15683f7abacdb9.png" title=" When I click on 'Exit' button from modal" width="1920"/>
+                <img src="8fef9c5128d21c81d3ca3fe04a392e4f03160ae7dbb4172b2f15683f7abacdb9.png" title=" When I click on 'Exit' button from modal (completed)" width="1920"/>
+                <img src="9455d5a6946665c634faeeb00272351be7ab90fb3f30cde9c4edd8f07742b328.png" title=" Given that I'm logged in to Voucher Entry page" width="1920"/>
+                <img src="9455d5a6946665c634faeeb00272351be7ab90fb3f30cde9c4edd8f07742b328.png" title=" When i open FAD URL" width="1920"/>
+                <img src="9455d5a6946665c634faeeb00272351be7ab90fb3f30cde9c4edd8f07742b328.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Voucher Entry}" width="1920"/>
+                <img src="5c86c5a0384a6e4074275b3e0e59c131cd4fb37c6d3ae708ceb2e59da749e634.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Voucher Entry}" width="1920"/>
+                <img src="8632707f168ddb8f0d07c89539a95e940ff8c838980c9ee26d72bd275ecf5166.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Voucher Entry}" width="1920"/>
+                <img src="b18b71daf465f2f907876e59fa5f49665e56a3949839db2a89cf07a6f29f9510.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Voucher Entry}" width="1920"/>
+                <img src="e7609831c2cccd35000ed561215512719bb65c3135cfdc5f115fd6ea8e09aa2d.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Voucher Entry} (completed)" width="1920"/>
+                <img src="e7609831c2cccd35000ed561215512719bb65c3135cfdc5f115fd6ea8e09aa2d.png" title=" Given that I'm logged in to Voucher Entry page (completed)" width="1920"/>
+                <img src="e7609831c2cccd35000ed561215512719bb65c3135cfdc5f115fd6ea8e09aa2d.png" title=" Then the Payment Information form and its contents should show up" width="1920"/>
+                <img src="6df4e0503d655a30508d075d844f27ee4da0fc5dd79bd2e4aadbfbe2ccd99fa3.png" title=" When I set the Supplier to '220221'" width="1920"/>
+                <img src="cd75a2aa614b26e671572c3bbd93a7d782b232b08ab2285df0211af097610ea3.png" title=" When I set the Supplier to '220221' (completed)" width="1920"/>
+                <img src="3fa67bb71dd44afc7bdd3335963fb31a982ce298355ae06e7c953f57daa7a971.png" title=" When I set the 'Invoice Number' to 'Fip9HQ5FtV'" width="1920"/>
+                <img src="e2501b65c3752318e3265130263605df8931ee7b2cf60d4b4372c5fd42d57726.png" title=" When I set the Currency to 'USD'" width="1920"/>
+                <img src="87c751c9307f2abdfae733b58ec9b573a721736818c588f03777621a93a1fbf0.png" title=" When I set the Currency to 'USD' (completed)" width="1920"/>
+                <img src="549ea8240e1195a3fbd806aae6d97681347c7c53754178b2e4dc8f1e468e7764.png" title=" When i click on continue button" width="1920"/>
+                <img src="87ff79f12e5ffa6d5285b8f2cfe6202247aa3871989905e16246bc18c19418db.png" title=" When i click on continue button (completed)" width="1920"/>
+                <img src="783a109d5ff3a2f2967662e79876d288f26b8dd082a0e215ac4263764f867e9a.png" title=" When I select the first Bank Account and click 'Submit' button if modal exist" width="1920"/>
+                <img src="f2bf51058cbf14b04f2df0161334053010eb9f3ed8ff766df3de697d174cb9fa.png" title=" When I set the Gross Amount to '5000'" width="1920"/>
+                <img src="8e33dd8b68d917fdd39396de94933c83365116ffd09fdc807e4bc34aa8a9cced.png" title=" When i click on continue button" width="1920"/>
+                <img src="c42fc4096efe060f1b8926527523cb8991ed43ef671b874e691974fd49aac60f.png" title=" When i click on continue button (completed)" width="1920"/>
+                <img src="8afb99e8639aa524074dc9eba7808ca0cdfb3a4fd207c2d75b8431f0f88062f8.png" title=" Then the 'GL Distribution' form and its contents should show up" width="1920"/>
+                <img src="e95ada8c0deb99f76ab037a916a46db6dc11cb083e77bed5d7ee81ad7e7204a0.png" title=" When I set the Account Number to '91100'" width="1920"/>
+                <img src="8ca2c87ef697056bfb10570d5b7aebf282a01e002e6451e98658152f0e0d6a48.png" title=" When I set the Account Number to '91100' (completed)" width="1920"/>
+                <img src="7e69757a8d2e04b5e6de9759808a117602c6312db70fc2c4cd6518f0b788086e.png" title=" When I set the Line Description to 'Test'" width="1920"/>
+                <img src="3b99bb8d990469fdaf1517706a85ec4dbe2856e9294698e39306581ce298ea6f.png" title=" When I set the Amount to '5000'" width="1920"/>
+                <img src="a20ff2142e1238294f6067745e623b493200606196a938a800cebe33867bd2da.png" title=" When I set the Employee to 'Milos Vitas'" width="1920"/>
+                <img src="9e87dea206636bf869dbb514bb0dddc505dd5c5d3ab2e77d58ab2a6f078097d1.png" title=" When I set the Employee to 'Milos Vitas' (completed)" width="1920"/>
+                <img src="cb3cb96ead4592d5bb7e94c0ece8e9047b797985f682c05c40d12b0597b75408.png" title=" When I set the Cost Center to '1MAN400'" width="1920"/>
+                <img src="09496d2110db8c5a333c70a4cc7745c8040a2818d68499a32760085f142dddce.png" title=" When I set the Cost Center to '1MAN400' (completed)" width="1920"/>
+                <img src="9a318234c7ac83657b1004bf47e64200cdec48ec47620cc5dd7cbfc77d566c87.png" title=" When I set the General Obj to 'AFGHAI'" width="1920"/>
+                <img src="d7253473d9281c48fb7b22b30cca641b035baa7ebd261af69fca97201f93702f.png" title=" When I set the General Obj to 'AFGHAI' (completed)" width="1920"/>
+                <img src="73357ff9d7ab1f68469c47850a1852d8e7774ded0d5c227c162f37fafd7b831c.png" title=" When I click on the 'Show Next' button" width="1920"/>
+                <img src="73357ff9d7ab1f68469c47850a1852d8e7774ded0d5c227c162f37fafd7b831c.png" title=" When I click on the 'Show Next' button (completed)" width="1920"/>
+                <img src="e215030aef0d255d598e170dded33d95b77c9261b0fe42214ed2a488a0d0d206.png" title=" When I set the AOE to 'YAO'" width="1920"/>
+                <img src="e25c6434d53413eb6e3c6d39ef9c4816d6ad0cf4cef9a2a0a80f6b4f3e9e9967.png" title=" When I set the AOE to 'YAO' (completed)" width="1920"/>
+                <img src="9e79f0de341a607ad088616484bc46a72ff7c6bc9625b676e9f2f9a6d54d677d.png" title=" When I set the Line Ref to 'Test123'" width="1920"/>
+                <img src="f82ccc355c87e28f064ca59936803fe9a229365b91b52f8109f80f78d7fa7d13.png" title=" When I set the Purchase Order to '12345'" width="1920"/>
+                <img src="79572701dc5a1b46563d2840f6f1408fe4951104b7dd85c9ba983eda195eea1e.png" title=" When I set the Units to '10'" width="1920"/>
+                <img src="fdf3819aba6b9ba689f3e4c2292cf55361c04f5acd11dc93d48026716697fabd.png" title=" When I set the Unit of Measure to '10'" width="1920"/>
+                <img src="7526319156ebf6aeed4567a2081a64789e9f1aa54d514a3d7f90e50e228afeb2.png" title=" When I set the Unit of Measure to '10' (completed)" width="1920"/>
+                <img src="902bcc5803833748574a920819af17ad305fdfc16c32a11fab52767b97dd77dd.png" title=" When I click on 'Save' button" width="1920"/>
+                <img src="6a72f701409301bb5f1a7600c0c816b8e334a916b6aa48d36163e42842ddba8a.png" title=" When I click on 'Save' button (completed)" width="1920"/>
+                <img src="f4c591d0c14322271bcfe1fe041e2fd0e310b756608f4962b33a1bde4d6f373f.png" title=" Then the voucher entry successfully created modal and its contents should show up" width="1920"/>
+                <img src="f4c591d0c14322271bcfe1fe041e2fd0e310b756608f4962b33a1bde4d6f373f.png" title=" Then the voucher entry successfully created modal should show up" width="1920"/>
+                <img src="f4c591d0c14322271bcfe1fe041e2fd0e310b756608f4962b33a1bde4d6f373f.png" title=" Then the batch number from voucher entry successfully created modal should show up" width="1920"/>
+                <img src="0c39a36ee13f9268f2c235ee17914756d9ab2207cf126decee74925b356b4fc3.png" title=" Then the batch number from voucher entry successfully created modal should show up (completed)" width="1920"/>
+                <img src="0c39a36ee13f9268f2c235ee17914756d9ab2207cf126decee74925b356b4fc3.png" title=" Then the document number from voucher entry successfully created modal should show up" width="1920"/>
+                <img src="7b1088b25b331fd5a053303e7acf8ff3c3b5077c14b1d66b7a060420f50201e3.png" title=" Then the document number from voucher entry successfully created modal should show up (completed)" width="1920"/>
+                <img src="7b1088b25b331fd5a053303e7acf8ff3c3b5077c14b1d66b7a060420f50201e3.png" title=" Then the voucher entry successfully created modal and its contents should show up (completed)" width="1920"/>
+                <img src="bfc9fb7bd63a5159f81783d3708936aeabda1097bf5994388cee4c98dd105305.png" title=" Given that I'm logged in to 'Batch Posting' page" width="1920"/>
+                <img src="bfc9fb7bd63a5159f81783d3708936aeabda1097bf5994388cee4c98dd105305.png" title=" When i open FAD URL" width="1920"/>
+                <img src="bfc9fb7bd63a5159f81783d3708936aeabda1097bf5994388cee4c98dd105305.png" title=" When i open page from sidebar menu: {Batch Posting}" width="1920"/>
+                <img src="4857b3cd3d8a89917f0e02d3348f78941fbf58813b4c1c33eb4829b4e2c6f3a5.png" title=" When i open page from sidebar menu: {Batch Posting}" width="1920"/>
+                <img src="de647d11fdb485df642212ec0ebcf85305dc2b2f4fb1e5b876251feb54721e3e.png" title=" When i open page from sidebar menu: {Batch Posting} (completed)" width="1920"/>
+                <img src="de647d11fdb485df642212ec0ebcf85305dc2b2f4fb1e5b876251feb54721e3e.png" title=" Given that I'm logged in to 'Batch Posting' page (completed)" width="1920"/>
+                <img src="7e4d84b7c0860fb15bc608c7fdba9cd0cdc29a985bc5071784ad909a4c978e9c.png" title=" When i click on clear button" width="1920"/>
+                <img src="7e4d84b7c0860fb15bc608c7fdba9cd0cdc29a985bc5071784ad909a4c978e9c.png" title=" When i click on clear button (completed)" width="1920"/>
+                <img src="595a228e0aa5bb37bf2689efc0eceb6dd2bfd257f5db0b96c8d5bb42425d2f19.png" title=" When i set the batch type to all batches" width="1920"/>
+                <img src="32392698ca18fccc633647b4721a0db1de8defc823ff4187ad2a14f08abf28e7.png" title=" When i set the batch type to all batches (completed)" width="1920"/>
+                <img src="455183436a3f881dc12e6257bb27bc13c1205c367dcc78a0dc0feb615e1d8296.png" title=" When I set the Batch Number using the previously generated value" width="1920"/>
+                <img src="79e2fbe7899ec0459f4d1c4559114622d7e2525b709595030e4a541736216675.png" title=" When I click 'Search' button" width="1920"/>
+                <img src="79e2fbe7899ec0459f4d1c4559114622d7e2525b709595030e4a541736216675.png" title=" When I click 'Search' button (completed)" width="1920"/>
+                <img src="9c37727c80f24fb1b93272236c1617eaf4330a3416505a1afd91ebfbe330890f.png" title=" When I click 'See More' button" width="1920"/>
+                <img src="26f8160037e7c1e35e55bead498ed8b6e5d6edb87677a7c54b11cdabb01adb77.png" title=" When I click 'See More' button (completed)" width="1920"/>
+                <img src="152639fa9a46e57b11f9bd78d8e8ecfd20820e725454a4623310a25f16598a6a.png" title=" Then the batch should contains the previously created documents" width="1920"/>
+                <img src="5aa13f57cc10f2227872ed55b160f701ccceda8e587e0ac02d2b7185c3d10bf1.png" title=" When I click 'Post' button" width="1920"/>
+                <img src="6c3911120da8cd3b3b6b80fbcae3683587a65ad1402ee51d97392d68abdbebb0.png" title=" When I click 'Post' button" width="1920"/>
+                <img src="22d6b69fef3fe7dc98d58ba928df38508b5bea6fd156e7030533dbc884272842.png" title=" When I click 'Post' button (completed)" width="1920"/>
+                <img src="a8916efde9a9a170247895673c4af390fbe7a22b1e16345aa7d4eb38cdaca3ed.png" title=" Given that I'm logged into 'Manual Payment' page" width="1920"/>
+                <img src="a8916efde9a9a170247895673c4af390fbe7a22b1e16345aa7d4eb38cdaca3ed.png" title=" When i open FAD URL" width="1920"/>
+                <img src="a8916efde9a9a170247895673c4af390fbe7a22b1e16345aa7d4eb38cdaca3ed.png" title=" When i open page from sidebar menu: {Accounts Payable,Payments,Manual Payment}" width="1920"/>
+                <img src="a671ab4ce7528a18b09eba2a1379fd5d23dfce97ec5b54841e3e95048ae6443b.png" title=" When i open page from sidebar menu: {Accounts Payable,Payments,Manual Payment}" width="1920"/>
+                <img src="43068b246e121d563f104f3681c53f299d3ee1c468c3214a7fe5c876c5224fc9.png" title=" When i open page from sidebar menu: {Accounts Payable,Payments,Manual Payment}" width="1920"/>
+                <img src="c8ee34a10accad9ce8c544850f04bd235797493df1f1743a785a7df0653c3706.png" title=" When i open page from sidebar menu: {Accounts Payable,Payments,Manual Payment}" width="1920"/>
+                <img src="3f37572f747ce7a167b5b6df7ada3e8dd97c0c32aaef01f41bde7967cc752c37.png" title=" When i open page from sidebar menu: {Accounts Payable,Payments,Manual Payment} (completed)" width="1920"/>
+                <img src="3f37572f747ce7a167b5b6df7ada3e8dd97c0c32aaef01f41bde7967cc752c37.png" title=" Given that I'm logged into 'Manual Payment' page (completed)" width="1920"/>
+                <img src="3f37572f747ce7a167b5b6df7ada3e8dd97c0c32aaef01f41bde7967cc752c37.png" title=" Then that 'Manual Payment' page and its contents should show up" width="1920"/>
+                <img src="aceff445931cf07b2d8fa497375b18a3f82421dc3cee5c9d208d09607b289676.png" title=" When I set the 'Supplier' to '220221'" width="1920"/>
+                <img src="55e66f5046c64b0b82e0137ebba6fff7e857c5e99deb576afa73e96a89ebf726.png" title=" When I set the 'Supplier' to '220221' (completed)" width="1920"/>
+                <img src="34a5b14a79fd9571e1c9537c76086a7fa5f317789970bf8ae2a0c1798f69f64b.png" title=" When I click on 'Search' button" width="1920"/>
+                <img src="1dbc172dca3f2ed7b2fcd629cd8b432b9c0ad36be57ce714636313e5a9c50518.png" title=" When I click on 'Search' button (completed)" width="1920"/>
+                <img src="da6d5cd5c46d24d58f37a99522058488bed11541769bbe9f04cdfe6fd9fada15.png" title=" Then the 'Open Invoices' section and its contents should show up" width="1920"/>
+                <img src="62e20f316665264767e8eb4c9b43859b2882b4df1d9f2225e7d1fac51dee24bb.png" title=" When i click on Apply button of the prepayment invoice 'nMmiaC3lDd'" width="1920"/>
+                <img src="f0280ad68fb09b57d29daf865243c8ccc273ae252d7545679f8df0c7fea09a7f.png" title=" When i click on Apply button of the prepayment invoice 'nMmiaC3lDd' (completed)" width="1920"/>
+                <img src="69542c3a8f61fc0277d8e65ede16e7f5e27dba3af2f3c43c5537a0c6acba7bae.png" title=" When I select the Open Invoices Row to 'nMmiaC3lDd'" width="1920"/>
+                <img src="69542c3a8f61fc0277d8e65ede16e7f5e27dba3af2f3c43c5537a0c6acba7bae.png" title=" When I select the Open Invoices Row to 'nMmiaC3lDd' (completed)" width="1920"/>
+                <img src="9dc156ff70591fee06ba84afc1c0537fa91142069713837ede722ce5c2aa5ec2.png" title=" When I select the Open Invoices Row to 'Fip9HQ5FtV'" width="1920"/>
+                <img src="9dc156ff70591fee06ba84afc1c0537fa91142069713837ede722ce5c2aa5ec2.png" title=" When I select the Open Invoices Row to 'Fip9HQ5FtV' (completed)" width="1920"/>
+                <img src="985c18a6f4fdeb8612747cbdb8c4e8c1e3fa1c9b06db184f18537d1387e6da27.png" title=" When I click the 'Select Cash' button" width="1920"/>
+                <img src="0fae075393eaebda2efcf149d1fcbdfe75f7b7238224f6b0690e86e14e4b6727.png" title=" When I click the 'Select Cash' button (completed)" width="1920"/>
+                <img src="0fae075393eaebda2efcf149d1fcbdfe75f7b7238224f6b0690e86e14e4b6727.png" title=" Then the 'Select Cash Account' modal should show up" width="1920"/>
+                <img src="aca14f8f600a8dd8115d685df72e9fe00e259f8f87e87f9552f3feaae1110e06.png" title=" When I select the first account from 'Select cash account' modal" width="1920"/>
+                <img src="aca14f8f600a8dd8115d685df72e9fe00e259f8f87e87f9552f3feaae1110e06.png" title=" When I select the first account from 'Select cash account' modal (completed)" width="1920"/>
+                <img src="6461eeecf45af8bcca46e67177e13ba30aab9564bfbe4e4d3f4eb6d3dd834b06.png" title=" When I click the 'Submit' button from modal" width="1920"/>
+                <img src="83259a0a4a054e013635d08e3a240501ec7c8b75665cebbe9932747859c49c57.png" title=" When I click the 'Submit' button from modal (completed)" width="1920"/>
+                <img src="83259a0a4a054e013635d08e3a240501ec7c8b75665cebbe9932747859c49c57.png" title=" Then the payment summary should appear" width="1920"/>
+                <img src="db3613da7da5dbe7856402c58d50c289b07a7c1d39cfe6597301214d2f4d9f8f.png" title=" When I click on 'Proceed' button" width="1920"/>
+                <img src="ec916b7c0939ddbc1ecb8d5fa952896e492d4ce84ed142e3bfec4076cd150c22.png" title=" When I click on 'Proceed' button (completed)" width="1920"/>
+                <img src="ed8a568775e799af2babb27453902ff74a1b42874f586390da483a21c0170644.png" title=" Then the 'Manual Payment Successfully Created' modal should show up" width="1920"/>
+                <img src="ed8a568775e799af2babb27453902ff74a1b42874f586390da483a21c0170644.png" title=" Then the manual payment successfully created modal should show up" width="1920"/>
+                <img src="ed8a568775e799af2babb27453902ff74a1b42874f586390da483a21c0170644.png" title=" Then the batch number should be displayed in manual payment successfully created modal" width="1920"/>
+                <img src="ed8a568775e799af2babb27453902ff74a1b42874f586390da483a21c0170644.png" title=" Then the batch number should be displayed in manual payment successfully created modal (completed)" width="1920"/>
+                <img src="ed8a568775e799af2babb27453902ff74a1b42874f586390da483a21c0170644.png" title=" Then the payment number should be displayed in manual payment successfully created modal" width="1920"/>
+                <img src="ed8a568775e799af2babb27453902ff74a1b42874f586390da483a21c0170644.png" title=" Then the payment number should be displayed in manual payment successfully created modal (completed)" width="1920"/>
+                <img src="ed8a568775e799af2babb27453902ff74a1b42874f586390da483a21c0170644.png" title=" Then the 'Manual Payment Successfully Created' modal should show up (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.6</span>
+</div>
+</body>
+</html>
