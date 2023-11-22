@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="a6cb8ad644beee886f9b9b44620668954a8e1811690e6d2ca82466fe39df5450.html">Unbilled PO Receipts</a></span>
+                > <span class="truncate-60"><a
+                    href="0755c70275e94db84f8260a50590834075c174565e6f5d64d41be41e8191e854.html">Close unbilled PO receipt </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 22-11-2023 16:19</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Unbilled PO Receipts </span>
+                                    <span class="badge tag-badge" style="">Story</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Close unbilled PO receipt
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="5b0fe48f68538d8ddd81422531a2540dbccdab596cff7754f230c1ef031088cb.png" title=" Given that I'm logged into 'Unbilled PO Receipt' page" width="1920"/>
+                <img src="5b0fe48f68538d8ddd81422531a2540dbccdab596cff7754f230c1ef031088cb.png" title=" When i open FAD URL" width="1920"/>
+                <img src="5b0fe48f68538d8ddd81422531a2540dbccdab596cff7754f230c1ef031088cb.png" title=" When i open page from sidebar menu: {Accounts Payable,Unbilled PO Receipts,Close Unbilled PO Receipt}" width="1920"/>
+                <img src="4fe0b42a78594ff74ded8963150eb88a5a1ff7a8077430ff8ff14a2ff445a71e.png" title=" When i open page from sidebar menu: {Accounts Payable,Unbilled PO Receipts,Close Unbilled PO Receipt}" width="1920"/>
+                <img src="7e5a19813ed5dcf1a50d02dfeb8e9ffe64a81d4fe222b3c74e88ce5022dc7b4e.png" title=" When i open page from sidebar menu: {Accounts Payable,Unbilled PO Receipts,Close Unbilled PO Receipt}" width="1920"/>
+                <img src="9910fe52ec39af5fbcf53ff63be2e36d29274b95edf23484a6f847a3ecd25fda.png" title=" When i open page from sidebar menu: {Accounts Payable,Unbilled PO Receipts,Close Unbilled PO Receipt}" width="1920"/>
+                <img src="7d37426a7c5d61251e24ae04150412d1147deb16d98fdf3d9831d449539bd364.png" title=" When i open page from sidebar menu: {Accounts Payable,Unbilled PO Receipts,Close Unbilled PO Receipt} (completed)" width="1920"/>
+                <img src="7d37426a7c5d61251e24ae04150412d1147deb16d98fdf3d9831d449539bd364.png" title=" Given that I'm logged into 'Unbilled PO Receipt' page (completed)" width="1920"/>
+                <img src="7d37426a7c5d61251e24ae04150412d1147deb16d98fdf3d9831d449539bd364.png" title=" Then the 'Unbilled PO Receipts' page and its contents should show up" width="1920"/>
+                <img src="53937bd4acad9e63aa901025d68947cb0b0b7debc34c936bbd29981f3cee3773.png" title=" When I set the 'Supplier' to '115227'" width="1920"/>
+                <img src="c716b87d3ac7473cf44610511265bdc7934792a3e2a39ec00dd3680331dbc1be.png" title=" When I set the 'Supplier' to '115227' (completed)" width="1920"/>
+                <img src="02bb34da9f01db2f7cf512eda1489a9ac86572ff75ca322e581e02b4d18f9aab.png" title=" When I click on 'Search' button" width="1920"/>
+                <img src="02bb34da9f01db2f7cf512eda1489a9ac86572ff75ca322e581e02b4d18f9aab.png" title=" When I click on 'Search' button (completed)" width="1920"/>
+                <img src="e3d0d51b85479198bbfb379d3462f017c43a241dc5c57470cbe6fc57f6550bc7.png" title=" Then the 'Open Invoices' search result should show up" width="1920"/>
+                <img src="3035eda18cf5a5a6bbc7b8d88c9e25bb065e099eeacfc1727d75b28de9434a8f.png" title=" When I select first open invoices row" width="1920"/>
+                <img src="3035eda18cf5a5a6bbc7b8d88c9e25bb065e099eeacfc1727d75b28de9434a8f.png" title=" When I select first open invoices row (completed)" width="1920"/>
+                <img src="cd4649e2d8be94270ed19d5f7a41c3e5a213cf56a3a05a6f49ad15891da2ddc1.png" title=" When I click 'Select CUPR Account' button" width="1920"/>
+                <img src="e84d5b07d200b3f4d0754913431016bc1f6165b45ea79508731d1a80255fb626.png" title=" When I click 'Select CUPR Account' button (completed)" width="1920"/>
+                <img src="dc61e2fe30672a76fbc8cb141df00a07063905ad04be47b0431d89101bbc3b7a.png" title=" Then the 'Select CUPR Account' modal should show up" width="1920"/>
+                <img src="589cc5c5cefe9203dbceb5c3d742e399b4109af8a36b13848fa8fc2f2d0e1ba8.png" title=" When I click first CUPR Account from modal" width="1920"/>
+                <img src="589cc5c5cefe9203dbceb5c3d742e399b4109af8a36b13848fa8fc2f2d0e1ba8.png" title=" When I click first CUPR Account from modal (completed)" width="1920"/>
+                <img src="a30c8d7334f0114cb03866dec714b4d17c40ceab583c4f423f53daa3d1310c22.png" title=" When I click modal 'Submit' button" width="1920"/>
+                <img src="a30c8d7334f0114cb03866dec714b4d17c40ceab583c4f423f53daa3d1310c22.png" title=" When I click modal 'Submit' button (completed)" width="1920"/>
+                <img src="383e8b11d2e0f62a50bdb31e572988ca14e3a2da8f629f452de707fbdccfc1b3.png" title=" When I click on 'Proceed' button" width="1920"/>
+                <img src="07e1e89da0cfeaff88b629ddf3be3dd1cbdf8932cca332607f490088dd873d32.png" title=" When I click on 'Proceed' button (completed)" width="1920"/>
+                <img src="d5ba0762dddf533d869cd759f6153a82e471320da5987ed53eae2d5642782963.png" title=" Then the 'CUPR Payment Successfully Created' modal should show up" width="1920"/>
+                <img src="b8f7bfa41876f4013d33481a9cfa13bac3ed7d9df9bba19e057cb33ca55c42ff.png" title=" When I click on 'Exit' button" width="1920"/>
+                <img src="e18cfc304e1304a60a543a31d65835692df22eac7d16ca04994d796cc3a44d73.png" title=" When I click on 'Exit' button (completed)" width="1920"/>
+                <img src="415ac2a15574f8f6fddb79e15f6d8a2b181e073c19f0ab8c89f4cf0e49202328.png" title=" Given that I'm logged into 'Review A/P Entries Payments' page" width="1920"/>
+                <img src="415ac2a15574f8f6fddb79e15f6d8a2b181e073c19f0ab8c89f4cf0e49202328.png" title=" When i open FAD URL" width="1920"/>
+                <img src="415ac2a15574f8f6fddb79e15f6d8a2b181e073c19f0ab8c89f4cf0e49202328.png" title=" When i open page from sidebar menu: {Accounts Payable,Review A/P Entries,Payments}" width="1920"/>
+                <img src="51860f50d9806cd28123d7a605653018d30c8fd6defc8dbff8eb498534846b81.png" title=" When i open page from sidebar menu: {Accounts Payable,Review A/P Entries,Payments}" width="1920"/>
+                <img src="74522ab35ef124477c21cc170afcd1b4e36c4a5c4c16c8c84f30775225c890af.png" title=" When i open page from sidebar menu: {Accounts Payable,Review A/P Entries,Payments}" width="1920"/>
+                <img src="7c3bcd87b2e1c00ef6933f52196dc4cd06325c54e503526db8b473d5ad02ef32.png" title=" When i open page from sidebar menu: {Accounts Payable,Review A/P Entries,Payments}" width="1920"/>
+                <img src="978ad812f9299b15439a91e40129641771ea38917620dc6f14f2e33b20ad9c1f.png" title=" When i open page from sidebar menu: {Accounts Payable,Review A/P Entries,Payments} (completed)" width="1920"/>
+                <img src="978ad812f9299b15439a91e40129641771ea38917620dc6f14f2e33b20ad9c1f.png" title=" Given that I'm logged into 'Review A/P Entries Payments' page (completed)" width="1920"/>
+                <img src="978ad812f9299b15439a91e40129641771ea38917620dc6f14f2e33b20ad9c1f.png" title=" Then the'Payments' search page should show up" width="1920"/>
+                <img src="d79f7cb03d6e579592ef79f0ca5187cc0bcd1fb9c91829614b6fa8ba15e21977.png" title=" When I set the 'Batch Number' using saved value from an unbilled PO Receipt" width="1920"/>
+                <img src="d79f7cb03d6e579592ef79f0ca5187cc0bcd1fb9c91829614b6fa8ba15e21977.png" title=" When I set the 'Batch Number' to '8689285'" width="1920"/>
+                <img src="d79f7cb03d6e579592ef79f0ca5187cc0bcd1fb9c91829614b6fa8ba15e21977.png" title=" When I set the 'Batch Number' using saved value from an unbilled PO Receipt (completed)" width="1920"/>
+                <img src="0ee2fd2225ddee3144c6b040c72ff6c2e50b0a511f6494a48b3e64a493fcf743.png" title=" When I click on 'Search' button" width="1920"/>
+                <img src="790abfd2d4ec8deeb3df84bb1a43c789b1b5d00d65accdafe11027c183f5cf49.png" title=" When I click on 'Search' button (completed)" width="1920"/>
+                <img src="27a9d37696a165cf6266560f4fe8b98e35564135ea1bb5af200b1f59968d338c.png" title=" When I click on 'Delete' button" width="1920"/>
+                <img src="27a9d37696a165cf6266560f4fe8b98e35564135ea1bb5af200b1f59968d338c.png" title=" When I click on 'Delete' button (completed)" width="1920"/>
+                <img src="b967d211781eda2908f3a86454c53bec7284c2d3515c432e0d2103b567117db5.png" title=" Then the 'Delete Manual Payment' modal should show up" width="1920"/>
+                <img src="d6dd27dbe3cd6cf7e4733dc31e6248d60d7d41eb0c256e42e82e2da30d18dd53.png" title=" When I click on modal 'Confirm' button" width="1920"/>
+                <img src="3025eb5e507a282fef845d053963d4554b2a9e9144bb76f43cb9181294782e99.png" title=" When I click on modal 'Confirm' button (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.6</span>
+</div>
+</body>
+</html>
