@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="4a7926c4b9838b83d7725c8e092af2f685d4a352038163a24872d0b83d9962c2.html">Annual Statistical Budget</a></span>
+                > <span class="truncate-60"><a
+                    href="d542f51b5e005b2506c7e911472e0dd5c117e3d9421f1d303cb79c6689e822a6.html">Create annual statistical entry </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 23-01-2024 17:48</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Annual Statistical Budget </span>
+                                    <span class="badge tag-badge" style="">Story</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Create annual statistical entry
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="da56ae3e1b96e6eedbf224efe0b0e6d3e64f0e881917ba5f6ac0ed9b02a0638b.png" title=" Given that I'm logged in to 'Annual Statistical Budget' page" width="1920"/>
+                <img src="da56ae3e1b96e6eedbf224efe0b0e6d3e64f0e881917ba5f6ac0ed9b02a0638b.png" title=" When i open FAD URL" width="1920"/>
+                <img src="da56ae3e1b96e6eedbf224efe0b0e6d3e64f0e881917ba5f6ac0ed9b02a0638b.png" title=" When i open page from sidebar menu: {General Ledger,Annual Statistical Budget}" width="1920"/>
+                <img src="a08d136e71e0eddf78bb9db99a05ae0a37620a95e24891164fc2bcd42fd74dc7.png" title=" When i open page from sidebar menu: {General Ledger,Annual Statistical Budget}" width="1920"/>
+                <img src="848022b314e670b2cbd04012e9027ec40db3820c1a751cd9ee0c91d349a0cbbd.png" title=" When i open page from sidebar menu: {General Ledger,Annual Statistical Budget}" width="1920"/>
+                <img src="4f438a1d6d9d2853b50effe7bb846b54e954c33658faa07bff1c4363a338a139.png" title=" When i open page from sidebar menu: {General Ledger,Annual Statistical Budget} (completed)" width="1920"/>
+                <img src="4f438a1d6d9d2853b50effe7bb846b54e954c33658faa07bff1c4363a338a139.png" title=" Given that I'm logged in to 'Annual Statistical Budget' page (completed)" width="1920"/>
+                <img src="4f438a1d6d9d2853b50effe7bb846b54e954c33658faa07bff1c4363a338a139.png" title=" Then the 'Statistical Entry - Annual Budget' should show up" width="1920"/>
+                <img src="fe17cf32db497d2f2e60babe3c653e2abba66e5a5556ca59c0799646f538e0d2.png" title=" When I set the Line Description to 'TEST1'" width="1920"/>
+                <img src="dc021eb5f72dfc91bab9606e18ce11274db0c7eb39f29b26f6930bbffa6dca95.png" title=" When I click on Continue button" width="1920"/>
+                <img src="dc021eb5f72dfc91bab9606e18ce11274db0c7eb39f29b26f6930bbffa6dca95.png" title=" When I click on Continue button (completed)" width="1920"/>
+                <img src="a00e57e4f32d5aa80937a10af100831155318953e6b54f878bad16a8e482d5a2.png" title=" Then the 'Statistical Entry Details - Anual Budget' should show up" width="1920"/>
+                <img src="1a0f095515850746f1897fb205d97965b05c3bc10bdc6506e696b4866c04cd9b.png" title=" When I set the Account Number to '01'" width="1920"/>
+                <img src="bff3d93ac2a9d1c4dc27fb82e74bc28c9d358f217477c1348b4cd9078d2a6489.png" title=" When I set the Account Number to '01' (completed)" width="1920"/>
+                <img src="b1452ea102d99e80977b85f0d3e4c19c6a9a85a23e2e9da165da6507afa3d1ac.png" title=" When I set the Units to '1000'" width="1920"/>
+                <img src="ba18e21f12f0e0e7d1234bd07dac854f73624d19a385a56ff99630b9b9ea40bf.png" title=" When I set the Cost Center to 'MAN5000'" width="1920"/>
+                <img src="c026472d4020b2f185bd0a6bd9bf6d6f077ea298911a582d0e99eb5fd28c1b7a.png" title=" When I set the Cost Center to 'MAN5000' (completed)" width="1920"/>
+                <img src="fe0f7800cd571d9188d679745f877b247f848afe74ef3c19c08e068e688d68fb.png" title=" When I set the Description to 'TEST1'" width="1920"/>
+                <img src="6d9646ba892d2f116fd6884028989ae15241e7f0e2327cafef6f1d064b947538.png" title=" When I click on Save button" width="1920"/>
+                <img src="64d84150e2931833c96d048d368e61d2c525fe01ac272da69614b8a59a25d7f3.png" title=" When I click on Save button (completed)" width="1920"/>
+                <img src="d179a0cf5c71e5e9e4ed278cb276f65d04372870503eca693a727bfa63fd1679.png" title=" Then the 'Statistical Budget Entry successfully created' modal should show up: <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.6</span>
+</div>
+</body>
+</html>
